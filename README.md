@@ -1,11 +1,10 @@
-# 🏰 Dungeon Escape  
+# 🏰 Keys of Freedom Game
 
-![Game Banner](docs/banner.png) <!-- Replace with your own image -->
 
 ---
 
 ## 📖 Description  
-**Dungeon Escape** is a **2D dungeon-style platformer** built with **Godot 4**.  
+**Keys of Freedom Game** is a **2D dungeon-style platformer** built with **Godot 4**.  
 The player must navigate through dungeon levels, **collect keys**, avoid traps and enemies, and finally **reach the exit door**.  
 
 To make the journey more immersive, a **prisoner NPC (princess)** sends short **AI-generated motivational hints** whenever the player collects a key.  
@@ -44,13 +43,16 @@ To make the journey more immersive, a **prisoner NPC (princess)** sends short **
 
 
 ## 🖼️ Screenshots  
-![Gameplay Screenshot 1](docs/screenshot1.png)  
-![Gameplay Screenshot 2](docs/screenshot2.png)  
+![Gameplay Screenshot 1]
+<img width="1155" height="654" alt="image (3)" src="https://github.com/user-attachments/assets/70b60eed-7ff2-4cdd-ab67-f72c132cae9e" />
+
+![Gameplay Screenshot 2]   
+<img width="1160" height="660" alt="image (4)" src="https://github.com/user-attachments/assets/263cf980-fef5-450b-bcf4-4a81e636b1ea" />
 
 ---
 
 ## 🎥 Demo Video  
-[▶ Watch Gameplay Demo](https://github.com/yourusername/DungeonEscape/demo.mp4) <!-- Replace with actual link -->
+[▶ Watch Gameplay Demo](https://www.loom.com/share/d0f30195e11e4122ac3ef02719870259?sid=ac212d68-6293-45d0-9812-721b2a82baf4) 
 
 ---
 
