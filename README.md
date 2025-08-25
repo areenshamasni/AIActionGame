@@ -41,11 +41,7 @@ To make the journey more immersive, a **prisoner NPC (princess)** sends short **
 - **AnimatedSprite2D** – Player, enemy, and NPC animations  
 - **AudioStreamPlayer** – Background music and sound effects  
 
----
 
-## 🧩 Project Structure  
-
----
 
 ## 🖼️ Screenshots  
 ![Gameplay Screenshot 1](docs/screenshot1.png)  
@@ -61,5 +57,9 @@ To make the journey more immersive, a **prisoner NPC (princess)** sends short **
 ## 🚀 How to Run  
 1. Clone this repository:  
    ```bash
-   git clone https://github.com/yourusername/DungeonEscape.git
-   cd DungeonEscape
+   git clone https://github.com/areenshamasni/AIActionGame.git
+   ```
+2.And you can install the game in :
+[https://drive.google.com/drive/folders/1WGOxHDMjOc4mLpG73WMJrZcUwm4aDhkl?usp=sharing]
+
+3.And open this folder from Godot.
