@@ -7,6 +7,8 @@ const JUMP_VELOCITY = -350.0
 @export var next_level := "res://level_2.tscn"
 
 var keys_collected: int = 0
+var is_attacking: bool = false
+
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 
 func _physics_process(delta: float) -> void:
@@ -26,15 +28,27 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("move_down") and is_on_floor():
 		velocity.y += 20
 
+	if Input.is_action_just_pressed("attack") and not is_attacking:
+		attack()
+
 	move_and_slide()
 
-	if not is_on_floor():
+	if is_attacking:
+		# إذا كان يهاجم، ما تغيّر الأنميشن
+		return
+	elif not is_on_floor():
 		if velocity.y < 0:
 			anim.play("jump")
 		else:
 			anim.play("fall")
 	else:
 		anim.play("idle")
+
+func attack() -> void:
+	is_attacking = true
+	anim.play("attack")
+	await anim.animation_finished
+	is_attacking = false
 
 func add_key() -> void:
 	GameManager.add_key()

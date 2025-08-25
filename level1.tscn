@@ -1,5 +1,6 @@
-[gd_scene load_steps=52 format=3 uid="uid://bw8t3xkvub42t"]
+[gd_scene load_steps=53 format=3 uid="uid://bw8t3xkvub42t"]
 
+[ext_resource type="Script" uid="uid://cy5bkiwogpxe0" path="res://player_level1.gd" id="1_hx44q"]
 [ext_resource type="Texture2D" uid="uid://cohqf00uoiv1g" path="res://Sprites/Attack3.png" id="1_xy4tn"]
 [ext_resource type="Texture2D" uid="uid://bpem8uwhjucy3" path="res://Sprites/Death.png" id="2_usj0q"]
 [ext_resource type="Texture2D" uid="uid://djt815rbn1ldq" path="res://Sprites/Fall.png" id="3_5j5gb"]
@@ -59,6 +60,7 @@ texture = SubResource("CompressedTexture2D_0xm2m")
 5:3/0 = 0
 5:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 2.1583, -8, 8, -8, 8, 8, -8, 8, -8, 3.23746)
 6:3/0 = 0
+6:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 8:3/0 = 0
 8:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 2.1583, -8, 8, -8, 8, 8, -8, 8, -8, 8)
 9:3/0 = 0
@@ -192,57 +194,6 @@ texture = SubResource("CompressedTexture2D_0xm2m")
 [sub_resource type="TileSet" id="TileSet_h2yge"]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_lmyl5")
-
-[sub_resource type="GDScript" id="GDScript_mlbie"]
-script/source = "extends CharacterBody2D
-
-const SPEED = 130.0
-const JUMP_VELOCITY = -350.0
-
-@export var required_keys := 3
-@export var next_level := \"res://level_2.tscn\"
-
-var keys_collected: int = 0
-@onready var anim: AnimatedSprite2D = $AnimatedSprite2D
-
-func _physics_process(delta: float) -> void:
-	if not is_on_floor():
-		velocity += get_gravity() * delta
-
-	var direction_x := Input.get_axis(\"move_left\", \"move_right\")
-	if direction_x != 0:
-		velocity.x = direction_x * SPEED
-		anim.flip_h = direction_x < 0
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-
-	if Input.is_action_just_pressed(\"jump\") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
-
-	if Input.is_action_pressed(\"move_down\") and is_on_floor():
-		velocity.y += 20
-
-	move_and_slide()
-
-	if not is_on_floor():
-		if velocity.y < 0:
-			anim.play(\"jump\")
-		else:
-			anim.play(\"fall\")
-	else:
-		anim.play(\"idle\")
-
-func add_key() -> void:
-	GameManager.add_key()
-	keys_collected += 1
-
-func die() -> void:
-	anim.play(\"death\")
-	set_physics_process(false)
-	await get_tree().create_timer(2.0).timeout
-	get_tree().change_scene_to_file(\"res://level1.tscn\")
-	GameManager.reset_keys()
-"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wapi5"]
 atlas = ExtResource("1_xy4tn")
@@ -386,9 +337,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_na6ls")
 }],
-"loop": true,
+"loop": false,
 "name": &"attack",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -505,6 +456,9 @@ size = Vector2(7, 31)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cove1"]
 size = Vector2(7, 31)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hx44q"]
+size = Vector2(20, 274)
+
 [node name="level1" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -520,13 +474,13 @@ z_index = 1
 position = Vector2(27, 20)
 collision_layer = 2
 collision_mask = 229
-script = SubResource("GDScript_mlbie")
+script = ExtResource("1_hx44q")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
 position = Vector2(-14, -31)
 scale = Vector2(0.515625, 0.476563)
 sprite_frames = SubResource("SpriteFrames_kek77")
-animation = &"idle"
+animation = &"attack"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 position = Vector2(-14, -31.25)
@@ -589,5 +543,11 @@ shape = SubResource("RectangleShape2D_xy4tn")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Door/StaticBody2D"]
 position = Vector2(409, -65)
 shape = SubResource("RectangleShape2D_cove1")
+
+[node name="Boarder" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boarder"]
+position = Vector2(-8, -121)
+shape = SubResource("RectangleShape2D_hx44q")
 
 [connection signal="body_entered" from="Door" to="Door" method="_on_body_entered"]
