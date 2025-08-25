@@ -67,15 +67,21 @@ To make the journey more immersive, a **prisoner NPC (princess)** sends short **
    ```
 
    
-2. And you can install the game in :
+2. And you can install the game in:
+ 
 [https://drive.google.com/drive/folders/1WGOxHDMjOc4mLpG73WMJrZcUwm4aDhkl?usp=sharing]
 
-3.Open this folder in Godot to run the project from source.
+3. Open this folder in Godot to run the project from source.
 
-4.Install NobodyWho (required for AI NPC).
 
-5.Download the HuggingFace model:
+4. Install NobodyWho (required for AI NPC).
+
+
+5. Download the HuggingFace model:
+
+
 👉 gemma-2-2b-it-Q4_K_M-GGUF
 
-6.Place the downloaded model file inside the cloned repository folder.
+6. Place the downloaded model file inside the cloned repository folder.
+
 
