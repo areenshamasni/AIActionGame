@@ -50,7 +50,6 @@ To make the journey more immersive, a **prisoner NPC (princess)** sends short **
 ## 🖼️ Screenshots  
 ![Gameplay Screenshot 1](docs/screenshot1.png)  
 ![Gameplay Screenshot 2](docs/screenshot2.png)  
-![Victory Screen](docs/screenshot_victory.png)  
 
 ---
 
