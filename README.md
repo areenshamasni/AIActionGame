@@ -80,7 +80,7 @@ To make the journey more immersive, a **prisoner NPC (princess)** sends short **
 5. Download the HuggingFace model:
 
 
-👉 gemma-2-2b-it-Q4_K_M-GGUF
+👉 [gemma-2-2b-it-Q4_K_M-GGUF]
 
 6. Place the downloaded model file inside the cloned repository folder.
 
