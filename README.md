@@ -1,4 +1,4 @@
-## Action Game  
+## Dungeon Escape  
 
 ## Description  
 A 2D dungeon-style game where the player must collect keys and overcome obstacles to reach freedom.  
