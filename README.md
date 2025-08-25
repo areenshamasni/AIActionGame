@@ -59,7 +59,10 @@ To make the journey more immersive, a **prisoner NPC (princess)** sends short **
    ```bash
    git clone https://github.com/areenshamasni/AIActionGame.git
    ```
-2.And you can install the game in :
+
+   
+2. And you can install the game in :
 [https://drive.google.com/drive/folders/1WGOxHDMjOc4mLpG73WMJrZcUwm4aDhkl?usp=sharing]
 
-3.And open this folder from Godot.
+
+3. And open this folder from Godot.
