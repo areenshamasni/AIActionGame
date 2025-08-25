@@ -34,7 +34,6 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 	if is_attacking:
-		# إذا كان يهاجم، ما تغيّر الأنميشن
 		return
 	elif not is_on_floor():
 		if velocity.y < 0:
