@@ -1,38 +1,66 @@
-## Dungeon Escape  
+# 🏰 Dungeon Escape  
 
-## Description  
-A 2D dungeon-style game where the player must collect keys and overcome obstacles to reach freedom.  
-Each time a key is collected, the prisoner sends an encouraging message to motivate the player and strengthen their determination.  
+![Game Banner](docs/banner.png) <!-- Replace with your own image -->
 
 ---
 
-## Gameplay  
-- Navigate through dungeon platforms.  
-- Avoid enemies and traps (such as spikes, swords, and arrows).  
-- Collect keys scattered across different areas.  
-- Once all keys are collected, the door unlocks and the player can exit the level.  
+## 📖 Description  
+**Dungeon Escape** is a **2D dungeon-style platformer** built with **Godot 4**.  
+The player must navigate through dungeon levels, **collect keys**, avoid traps and enemies, and finally **reach the exit door**.  
+
+To make the journey more immersive, a **prisoner NPC (princess)** sends short **AI-generated motivational hints** whenever the player collects a key.  
 
 ---
 
-## Artificial Intelligence  
-The *nobodywho* library is used to program the prisoner to send dynamic motivational messages.  
-- Each time a player collects a key → the message changes.  
-- Messages are generated using AI to enhance the gameplay experience.  
+## 🎮 Gameplay Features  
+- 👨‍🦱 **Player Movement**: Smooth walking, jumping, and attacking.  
+- 🔑 **Key Collection**: Gather all keys to unlock the final door.  
+- 🚪 **Doors**:  
+  - **Door1** → Moves the player from **Level 1 → Level 2**.  
+  - **Door2** → Triggers the **Victory Message** once all keys are collected.  
+- 🧌 **Enemies**: Patrol, attack, and can be defeated by the player.  
+- ☠️ **Traps**: Spikes and hazards that kill the player if touched.  
+- 👑 **Prisoner NPC (Princess)**: AI-powered hints and encouragement.  
+- ❤️ **Health System**: Player has limited lives and can die if health reaches zero.  
 
 ---
 
-## Technologies Used  
-- **Godot 4** (Game Engine)  
-- **GDScript** (Programming Language)  
-- **nobodywho AI** (For generating motivational messages)  
-- **Tileset & Tilemap** (For dungeon and environment design)
+## 🤖 Artificial Intelligence Integration  
+- Powered by the **NobodyWho AI** library.  
+- Each time a key is collected → a **new motivational message** is displayed.  
+- Messages are **short, dynamic, and limited to 12 words**.  
+- Enhances immersion and replayability.  
 
 ---
 
-## Demo Video  
- 
+## 🛠️ Technologies Used  
+- **Godot 4** – Game Engine  
+- **GDScript** – Game logic (Player, Enemy, Doors, Keys, NPC)  
+- **NobodyWho AI** – Dynamic motivational hints  
+- **Tilemap & Tileset** – Dungeon and environment design  
+- **AnimatedSprite2D** – Player, enemy, and NPC animations  
+- **AudioStreamPlayer** – Background music and sound effects  
 
 ---
 
-## How to Run  
+## 🧩 Project Structure  
 
+---
+
+## 🖼️ Screenshots  
+![Gameplay Screenshot 1](docs/screenshot1.png)  
+![Gameplay Screenshot 2](docs/screenshot2.png)  
+![Victory Screen](docs/screenshot_victory.png)  
+
+---
+
+## 🎥 Demo Video  
+[▶ Watch Gameplay Demo](https://github.com/yourusername/DungeonEscape/demo.mp4) <!-- Replace with actual link -->
+
+---
+
+## 🚀 How to Run  
+1. Clone this repository:  
+   ```bash
+   git clone https://github.com/yourusername/DungeonEscape.git
+   cd DungeonEscape
