@@ -1,6 +1,5 @@
 # 🏰 Keys of Freedom Game
 
-
 ---
 
 ## 📖 Description  
@@ -40,25 +39,25 @@ To make the journey more immersive, a **prisoner NPC (princess)** sends short **
 - **AnimatedSprite2D** – Player, enemy, and NPC animations  
 - **AudioStreamPlayer** – Background music and sound effects  
 
-
+---
 
 ## 🖼️ Screenshots  
-![Gameplay Screenshot 1]
-<img width="1155" height="654" alt="image (3)" src="https://github.com/user-attachments/assets/70b60eed-7ff2-4cdd-ab67-f72c132cae9e" />
+![Gameplay Screenshot 1](https://github.com/user-attachments/assets/70b60eed-7ff2-4cdd-ab67-f72c132cae9e)  
 
-![Gameplay Screenshot 2]   
-<img width="1160" height="660" alt="image (4)" src="https://github.com/user-attachments/assets/263cf980-fef5-450b-bcf4-4a81e636b1ea" />
+![Gameplay Screenshot 2](https://github.com/user-attachments/assets/263cf980-fef5-450b-bcf4-4a81e636b1ea)  
 
 ---
 
 ## 🎥 Demo Video  
-[▶ Watch Gameplay Demo](https://www.loom.com/share/d0f30195e11e4122ac3ef02719870259?sid=ac212d68-6293-45d0-9812-721b2a82baf4) 
+[▶ Watch Gameplay Demo](https://www.loom.com/share/d0f30195e11e4122ac3ef02719870259?sid=ac212d68-6293-45d0-9812-721b2a82baf4)  
 
 ---
-## Report 
-👉 [https://docs.google.com/document/d/11dPIDX5BczmvEYmVRNX4jy1k8BXRhNvqASJtwC1-nBU/edit?tab=t.0]
+
+## 📑 Report  
+👉 [Read Full Report](https://docs.google.com/document/d/11dPIDX5BczmvEYmVRNX4jy1k8BXRhNvqASJtwC1-nBU/edit?tab=t.0)  
 
 ---
+
 ## 🚀 How to Run :
 
 1. Clone this repository:  
@@ -66,22 +65,15 @@ To make the journey more immersive, a **prisoner NPC (princess)** sends short **
    git clone https://github.com/areenshamasni/AIActionGame.git
    ```
 
-   
-2. And you can install the game in:
- 
-[https://drive.google.com/drive/folders/1WGOxHDMjOc4mLpG73WMJrZcUwm4aDhkl?usp=sharing]
+2. Or download the game from:  
+   [Google Drive Folder](https://drive.google.com/drive/folders/1WGOxHDMjOc4mLpG73WMJrZcUwm4aDhkl?usp=sharing)
 
-3. Open this folder in Godot to run the project from source.
+3. Make sure you have **Godot 4.4** installed, then open this folder in Godot to run the project from source.
 
+4. Install **NobodyWho** (required for AI NPC).
 
-4. Install NobodyWho (required for AI NPC).
-
-
-5. Download the HuggingFace model:
-
-
-👉 [gemma-2-2b-it-Q4_K_M-GGUF]
+5. Download the HuggingFace model:  
+   [gemma-2-2b-it-Q4\_K\_M-GGUF](https://huggingface.co/BafS/gemma-2-2b-it-Q4_K_M-GGUF)
 
 6. Place the downloaded model file inside the cloned repository folder.
-
 
